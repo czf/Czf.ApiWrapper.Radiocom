@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>czf</Authors>
+    <Company />
+    <PackageProjectUrl>https://github.com/czf/Czf.ApiWrapper.Radiocom</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/czf/Czf.ApiWrapper.Radiocom</RepositoryUrl>
+    <PackageTags>radio.com</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
