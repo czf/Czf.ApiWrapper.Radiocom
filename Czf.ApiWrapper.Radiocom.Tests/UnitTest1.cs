@@ -13,7 +13,7 @@ namespace Czf.ApiWrapper.Radiocom.Tests
         [Test]
         public async Task Test1()
         {
-            using (RadiocomClient radiocomClient = new RadiocomClient())
+            using (RadiocomClient radiocomClient = new RadiocomClient(new System.Net.Http.HttpClient()))
             {
                 var result = await radiocomClient.StationRecentlyPlayed(902, 20, DayOfWeek.Monday);
                 Assert.NotNull(result);

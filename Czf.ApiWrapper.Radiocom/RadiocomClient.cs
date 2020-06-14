@@ -22,11 +22,10 @@ namespace Czf.ApiWrapper.Radiocom
         /// <summary>
         /// API client for radio.com
         /// </summary>
-        public RadiocomClient()
+        public RadiocomClient(HttpClient client)
         {
-            _client = new HttpClient();
+            _client = client;
             _client.BaseAddress = BASE_URI;
-
         }
         /// <summary>
         /// Retrieve recently played information for a specific station.

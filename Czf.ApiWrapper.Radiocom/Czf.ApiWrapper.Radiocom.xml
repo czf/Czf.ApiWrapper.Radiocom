@@ -13,7 +13,7 @@
             <param name="dayOfWeek">the day of the week for the station using it local time</param>
             <example> wednesday at 10pm in pacific daylight time would use dayOfWeek = 3 and go offset seven hours so hour = 5</example>
         </member>
-        <member name="M:Czf.ApiWrapper.Radiocom.RadiocomClient.#ctor">
+        <member name="M:Czf.ApiWrapper.Radiocom.RadiocomClient.#ctor(System.Net.Http.HttpClient)">
             <summary>
             API client for radio.com
             </summary>
