@@ -21,12 +21,12 @@ steps:
     displayName: build
     inputs:
       command: 'build'
-      projects: 'czf/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
+      projects: '$(Build.Repository.LocalPath)/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
   - task: DotNetCoreCLI@2
     displayName: pack
     inputs:
       command: 'pack'
-      packagesToPack: 'czf/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
+      packagesToPack: '$(Build.Repository.LocalPath)/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
       versioningScheme: 'off'
   - task: DotNetCoreCLI@2
     displayName: push
