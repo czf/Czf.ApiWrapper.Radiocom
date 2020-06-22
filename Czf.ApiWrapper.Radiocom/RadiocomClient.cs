@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Net.Http;
-using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace Czf.ApiWrapper.Radiocom
 {
-    public class RadiocomClient : IRadiocomClient, IDisposable
+    public class RadiocomClient : IRadiocomClient
     {
         #region static/consts
         private static readonly Uri BASE_URI = new Uri("https://www.radio.com/");
@@ -15,7 +14,6 @@ namespace Czf.ApiWrapper.Radiocom
         #endregion static/consts
 
         #region private
-        private bool _disposed = false;
         private HttpClient _client;
         #endregion private
 
@@ -46,24 +44,6 @@ namespace Czf.ApiWrapper.Radiocom
                     return response;
                 }
             }
-        }
-
-        public void Dispose() => Dispose(true);
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (_disposed)
-            {
-                return;
-            }
-
-            if (disposing)
-            {
-                // Dispose managed state (managed objects).
-                _client?.Dispose();
-            }
-
-            _disposed = true;
         }
     }
 }

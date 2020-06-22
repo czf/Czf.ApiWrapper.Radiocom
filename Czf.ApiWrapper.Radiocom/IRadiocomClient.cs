@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Czf.ApiWrapper.Radiocom
 {
-    public interface IRadiocomClient 
+    public interface IRadiocomClient
     {
         /// <summary>
         /// Retrieve recently played information for a specific station.

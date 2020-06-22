@@ -7,12 +7,13 @@
     <PackageProjectUrl>https://github.com/czf/Czf.ApiWrapper.Radiocom</PackageProjectUrl>
     <RepositoryUrl>https://github.com/czf/Czf.ApiWrapper.Radiocom</RepositoryUrl>
     <PackageTags>radio.com</PackageTags>
-    <Version>1.1.1</Version>
+    <Version>1.2</Version>
   </PropertyGroup>
 
 	<PropertyGroup>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<SignAssembly>false</SignAssembly>
 		
 	</PropertyGroup>
 
