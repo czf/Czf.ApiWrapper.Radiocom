@@ -35,3 +35,4 @@ steps:
       command: 'push'
       packagesToPush: '$(Build.ArtifactStagingDirectory)/*.*upkg'
       nuGetFeedType: 'external'
+      publishFeedCredentials: 'nuget-radiocom'
