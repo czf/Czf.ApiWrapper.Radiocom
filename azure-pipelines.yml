@@ -13,6 +13,11 @@ pool:
 steps:
   - task: DotNetCoreCLI@2
     inputs:
+      command: 'restore'
+      projects: '/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
+      feedsToUse: 'select'
+  - task: DotNetCoreCLI@2
+    inputs:
       command: 'build'
       projects: '/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
   - task: DotNetCoreCLI@2
