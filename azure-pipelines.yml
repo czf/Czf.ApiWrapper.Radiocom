@@ -15,7 +15,7 @@ steps:
     displayName: restore
     inputs:
       command: 'restore'
-      projects: 'czf/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
+      projects: '$(Build.Repository.LocalPath)/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
       feedsToUse: 'select'
   - task: DotNetCoreCLI@2
     displayName: build
