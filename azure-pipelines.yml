@@ -12,20 +12,25 @@ pool:
 
 steps:
   - task: DotNetCoreCLI@2
+    displayName: restore
     inputs:
       command: 'restore'
       projects: '/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
       feedsToUse: 'select'
   - task: DotNetCoreCLI@2
+    displayName: build
     inputs:
       command: 'build'
       projects: '/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
   - task: DotNetCoreCLI@2
+    displayName: pack
     inputs:
       command: 'pack'
       packagesToPack: '/Czf.ApiWrapper.Radiocom/Czf.ApiWrapper.Radiocom.csproj'
       versioningScheme: 'off'
   - task: DotNetCoreCLI@2
+    displayName: push
+    enabled: false
     inputs:
       command: 'push'
       packagesToPush: '$(Build.ArtifactStagingDirectory)/*.*upkg'
