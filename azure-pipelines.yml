@@ -30,7 +30,7 @@ steps:
       versioningScheme: 'off'
   - task: DotNetCoreCLI@2
     displayName: push
-    enabled: false
+    enabled: true
     inputs:
       command: 'push'
       packagesToPush: '$(Build.ArtifactStagingDirectory)/*.*upkg'
