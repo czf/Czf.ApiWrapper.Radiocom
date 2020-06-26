@@ -8,5 +8,10 @@ namespace Czf.ApiWrapper.Radiocom
         public List<ScheduleItem> Schedule{ get; set; }
 
         public Station Station { get; set; }
+
+        public StationRecentlyPlayedResponse()
+        {
+            Schedule = new List<ScheduleItem>();
+        }
     }
 }
