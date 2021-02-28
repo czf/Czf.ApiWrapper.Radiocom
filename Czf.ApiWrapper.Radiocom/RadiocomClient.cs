@@ -23,7 +23,6 @@ namespace Czf.ApiWrapper.Radiocom
         public RadiocomClient(HttpClient client)
         {
             _client = client;
-            _client.BaseAddress = BASE_URI;
         }
         /// <summary>
         /// Retrieve recently played information for a specific station.
@@ -35,7 +34,7 @@ namespace Czf.ApiWrapper.Radiocom
         {
             string query = string.Format(STATION_RECENTLY_PLAYED_PATH, stationId, hour, (int)dayOfWeek);
 
-            using (HttpResponseMessage responseMessage = await _client.GetAsync(query))
+            using (HttpResponseMessage responseMessage = await _client.GetAsync(BASE_URI + query))
             {
                 using (HttpContent content = responseMessage.Content)
                 {
